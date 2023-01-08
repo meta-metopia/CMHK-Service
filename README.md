@@ -1,4 +1,4 @@
-![metopia](/images//metopia.png)
+![metopia](/images//logo.png)
 
 # Metopia CMHK Data Service
 
