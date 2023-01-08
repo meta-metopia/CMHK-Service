@@ -2,8 +2,8 @@
 
 # Metopia CMHK Data Service
 
-This is a data service for Metopia CMHK. It is a RESTful API that provides data for the Metopia CMHK app. Check out the [API documentation](https://cmhk.metopia.co/api) for more information.
-
+This is a data service for Metopia CMHK. It is a RESTful API that provides data for the Metopia CMHK app. Check out
+the [API documentation](https://cmhk.metopia.co/api) for more information.
 
 # Local Development
 
@@ -23,6 +23,7 @@ This is a data service for Metopia CMHK. It is a RESTful API that provides data 
 DATABASE_URL
 RPC_URL=
 CONTRACT_ADDRESS=
+REDIS_URL=
 ```
 
 4. Run `pnpm start:dev` to start the server

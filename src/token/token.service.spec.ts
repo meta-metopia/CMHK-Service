@@ -6,9 +6,9 @@ import { Event, EventSchema } from '../schemas/Event.schema';
 import { Contract, ContractSchema } from '../schemas/Contract.schema';
 import { Connection, Model } from 'mongoose';
 import * as mongoose from 'mongoose';
-import * as process from 'process';
-import { event1, event2, user1 } from '../common/mockdata';
+
 import { HistoryType } from './dto/GetHistory.dto';
+import { event1, event2, user1 } from '../common/mockdata';
 
 describe('TokenService', () => {
   let service: TokenService;
