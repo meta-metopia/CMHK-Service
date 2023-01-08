@@ -5,8 +5,7 @@ import { Event, EventSchema } from '../schemas/Event.schema';
 import { Contract, ContractSchema } from '../schemas/Contract.schema';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import { TokenService } from './token.service';
-import { Model } from 'mongoose';
-import mongoose from 'mongoose';
+import mongoose, { Model } from 'mongoose';
 import { BadRequestException } from '@nestjs/common';
 import { BlockchainService } from '../blockchain/blockchain.service';
 

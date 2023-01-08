@@ -1,11 +1,9 @@
 import {
   BadRequestException,
-  CacheInterceptor,
   Controller,
   Get,
   ParseIntPipe,
   Query,
-  UseInterceptors,
 } from '@nestjs/common';
 import * as process from 'process';
 import {
@@ -23,7 +21,7 @@ import { GetHistoryDto } from './dto/GetHistory.dto';
 import { BlockchainService } from '../blockchain/blockchain.service';
 import { GetBalanceDto } from './dto/GetBalance.dto';
 
-@Controller('token')
+@Controller({ version: '1', path: 'token' })
 export class TokenController {
   constructor(
     private tokenService: TokenService,

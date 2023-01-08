@@ -8,6 +8,7 @@ import { GetHistoryDto } from './dto/GetHistory.dto';
 @Injectable()
 export class TokenService {
   constructor(@InjectModel(Event.name) private eventModel: Model<Event>) {}
+
   async history(
     contractAddress: string,
     userAddress: string,
