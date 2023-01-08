@@ -1,9 +1,11 @@
 import {
   BadRequestException,
+  CacheInterceptor,
   Controller,
   Get,
   ParseIntPipe,
   Query,
+  UseInterceptors,
 } from '@nestjs/common';
 import * as process from 'process';
 import {
