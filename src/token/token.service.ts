@@ -14,8 +14,6 @@ export class TokenService {
     per = 10,
     page = 1,
   ): Promise<Pagination<GetHistoryDto>> {
-    console.log(userAddress);
-
     const pipeline = [
       {
         $lookup: {
