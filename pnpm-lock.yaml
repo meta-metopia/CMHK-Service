@@ -15,6 +15,7 @@ specifiers:
   '@types/supertest': ^2.0.11
   '@typescript-eslint/eslint-plugin': ^5.0.0
   '@typescript-eslint/parser': ^5.0.0
+  '@vercel/ncc': ^0.36.0
   class-transformer: ^0.5.1
   class-validator: ^0.14.0
   dayjs: ^1.11.7
@@ -63,6 +64,7 @@ devDependencies:
   '@types/supertest': 2.0.12
   '@typescript-eslint/eslint-plugin': 5.48.0_k73wpmdolxikpyqun3p36akaaq
   '@typescript-eslint/parser': 5.48.0_iukboom6ndih5an6iafl45j2fe
+  '@vercel/ncc': 0.36.0
   eslint: 8.31.0
   eslint-config-prettier: 8.6.0_eslint@8.31.0
   eslint-plugin-prettier: 4.2.1_iu5s7nk6dw7o3tajefwfiqfmge
@@ -2587,6 +2589,11 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.48.0
       eslint-visitor-keys: 3.3.0
+    dev: true
+
+  /@vercel/ncc/0.36.0:
+    resolution: {integrity: sha512-/ZTUJ/ZkRt694k7KJNimgmHjtQcRuVwsST2Z6XfYveQIuBbHR+EqkTc1jfgPkQmMyk/vtpxo3nVxe8CNuau86A==}
+    hasBin: true
     dev: true
 
   /@webassemblyjs/ast/1.11.1:
