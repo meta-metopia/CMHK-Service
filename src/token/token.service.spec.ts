@@ -1,11 +1,11 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { TokenService } from './token.service';
-import { getModelToken, InjectModel, MongooseModule } from '@nestjs/mongoose';
+import { getModelToken, MongooseModule } from '@nestjs/mongoose';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import { Event, EventSchema } from '../schemas/Event.schema';
 import { Contract, ContractSchema } from '../schemas/Contract.schema';
-import { Connection, Model } from 'mongoose';
 import * as mongoose from 'mongoose';
+import { Model } from 'mongoose';
 
 import { HistoryType } from './dto/GetHistory.dto';
 import { event1, event2, user1 } from '../common/mockdata';

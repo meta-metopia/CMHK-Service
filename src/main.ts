@@ -2,10 +2,15 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { config } from 'dotenv';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { VersioningType } from '@nestjs/common';
 
 config();
+
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.enableVersioning({
+    type: VersioningType.URI,
+  });
 
   const config = new DocumentBuilder()
     .setTitle('CMHK API')
@@ -17,4 +22,5 @@ async function bootstrap() {
 
   await app.listen(3000);
 }
+
 bootstrap();
