@@ -1,0 +1,44 @@
+# test node js project
+name: Test
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 7.1.5
+      - run: pnpm install
+      - run: pnpm test
+        name: Running tests
+        env:
+          SERVER_AWS_REGION: sgp1
+          SERVER_AWS_BUCKET_NAME: video
+          SERVER_AWS_ACCESS_KEY_ID: key
+          SERVER_AWS_SECRET_ACCESS_KEY: secret
+      - run: pnpm test:e2e
+        name: Running e2e tests
+        env:
+          JWT_SECRET: secret
+      - run: pnpm build
+        name: Building project
+  create-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    if: ${{ (github.event.pusher.name != 'github action') && (github.ref == 'refs/heads/main') }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        with:
+          branch: main
